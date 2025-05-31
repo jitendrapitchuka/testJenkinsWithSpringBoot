@@ -20,36 +20,42 @@ import com.jitendra.graphql.Service.PersonService;
 @RequestMapping("/api")
 public class PersonController {
 
-    @Autowired
-    private PersonService personService;
+    // @Autowired
+    // private PersonService personService;
 
-    @GetMapping("/persons")
-    public List<Person> persons() {
-        return personService.getAllPersons();
-    }
+    // @GetMapping("/persons")
+    // public List<Person> persons() {
+    //     return personService.getAllPersons();
+    // }
 
-    @PostMapping("/persons")
-    public Person savePerson(@RequestBody Person person) {
-        return personService.savPerson(person);
-    }
+    // @PostMapping("/persons")
+    // public Person savePerson(@RequestBody Person person) {
+    //     return personService.savPerson(person);
+    // }
 
-    @PutMapping
-    public Person updatePerson(@RequestBody Person person) {
-        Long id = person.getId();
-        if (id == null) {
-            throw new IllegalArgumentException("ID must not be null for update");
-        }
-        return personService.updatePerson(id, person);
-    }
+    // @PutMapping
+    // public Person updatePerson(@RequestBody Person person) {
+    //     Long id = person.getId();
+    //     if (id == null) {
+    //         throw new IllegalArgumentException("ID must not be null for update");
+    //     }
+    //     return personService.updatePerson(id, person);
+    // }
 
    
 
-    @DeleteMapping("/persons/{id}")
-    public String deletePersonById(@PathVariable Long id) {
-        if (id == null) {
-            throw new IllegalArgumentException("ID must not be null for deletion");
-        }
-        return personService.deletePersonById(id);
+    // @DeleteMapping("/persons/{id}")
+    // public String deletePersonById(@PathVariable Long id) {
+    //     if (id == null) {
+    //         throw new IllegalArgumentException("ID must not be null for deletion");
+    //     }
+    //     return personService.deletePersonById(id);
+
+     @GetMapping
+     public String hello() {
+         return "Hello, World!";    
+     }
+
     }
 
-}
+

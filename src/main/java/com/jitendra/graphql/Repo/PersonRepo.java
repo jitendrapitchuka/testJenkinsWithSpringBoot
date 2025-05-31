@@ -1,11 +1,11 @@
-package com.jitendra.graphql.Repo;
+// package com.jitendra.graphql.Repo;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+// import org.springframework.data.jpa.repository.JpaRepository;
+// import org.springframework.stereotype.Repository;
 
-import com.jitendra.graphql.Entity.Person;
+// import com.jitendra.graphql.Entity.Person;
 
-@Repository
-public interface PersonRepo extends JpaRepository<Person,Long>{
+// @Repository
+// public interface PersonRepo extends JpaRepository<Person,Long>{
 
-}
+// }
